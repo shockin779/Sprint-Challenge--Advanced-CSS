@@ -13,9 +13,14 @@
     }
 
     nav {
-        width: 32%;
+        width: 40%;
         margin-bottom: 10px;
         .flex-setup(row; space-around; center;);
+
+        @media @phone {
+            width: 85%;
+            justify-content: space-around;
+        }
 
         a {
             font-size: 14px;
