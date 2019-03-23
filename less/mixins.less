@@ -11,3 +11,13 @@
     align-items: @align;
     flex-direction: @direction;
 }
+
+.btn-creator(@bgcolor; @textcolor;) {
+    color: @textcolor;
+    background: @bgcolor;
+
+    &:hover {
+        color: @bgcolor;
+        background: @textcolor;
+    }
+}
