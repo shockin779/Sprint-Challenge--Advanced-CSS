@@ -365,3 +365,66 @@ footer {
   height: auto;
   border-radius: 10px;
 }
+.contact-page header h2 {
+  padding: 15px;
+}
+.contact-page header p {
+  padding: 0 15px;
+  margin-top: 10px;
+}
+.contact-page header img {
+  width: 100%;
+  border-radius: 5px;
+}
+.contact-page section {
+  margin: 40px 0;
+}
+.contact-page section h2 {
+  padding: 15px;
+}
+.contact-page section form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 20px;
+}
+.contact-page section form input {
+  margin: 5px 0;
+  height: 20px;
+  width: 30%;
+}
+@media (max-width: 500px) {
+  .contact-page section form input {
+    width: 90%;
+  }
+}
+.contact-page section form textarea {
+  margin: 5px 0;
+  width: 30%;
+}
+@media (max-width: 500px) {
+  .contact-page section form textarea {
+    width: 90%;
+  }
+}
+.contact-page section form submit {
+  width: 30%;
+  font-size: 16px;
+  background: #364254;
+  text-align: center;
+  color: white;
+  border-radius: 8px;
+  padding: 5px 12px;
+  margin-top: 10px;
+}
+.contact-page section form submit:hover {
+  background: white;
+  color: #364254;
+}
+@media (max-width: 500px) {
+  .contact-page section form submit {
+    width: 90%;
+    padding: 9px 16px;
+  }
+}
