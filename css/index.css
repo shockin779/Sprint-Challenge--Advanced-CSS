@@ -169,6 +169,8 @@ a {
   background: #f4f4f4;
   height: auto;
   padding-top: 10px;
+  z-index: 1;
+  opacity: 0.8;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -196,6 +198,11 @@ a {
   font-size: 14px;
   font-weight: 600;
 }
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 footer {
   color: #22283B;
   background: #f4f4f4;
@@ -206,8 +213,46 @@ footer {
   justify-content: center;
   align-items: center;
 }
+@keyframes slide-in-from-right {
+  0% {
+    left: 100%;
+  }
+  25% {
+    left: 75%;
+  }
+  50% {
+    left: 50%;
+  }
+  75% {
+    left: 25%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+@keyframes slide-in-from-left {
+  0% {
+    right: 100%;
+  }
+  25% {
+    right: 75%;
+  }
+  50% {
+    right: 50%;
+  }
+  75% {
+    right: 25%;
+  }
+  100% {
+    right: 0%;
+  }
+}
 .home .intro h2 {
   padding: 15px;
+  animation-name: slide-in-from-right;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  position: relative;
 }
 .home .intro p {
   padding: 0 15px;
@@ -226,6 +271,10 @@ footer {
   margin: 20px 2.5%;
   border-radius: 20px;
   height: 100%;
+  animation-name: slide-in-from-left;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  position: relative;
 }
 @media (max-width: 500px) {
   .home .space-images img {
@@ -315,4 +364,68 @@ footer {
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+.contact-page header h2 {
+  padding: 15px;
+}
+.contact-page header p {
+  padding: 0 15px;
+  margin-top: 10px;
+}
+.contact-page header img {
+  width: 100%;
+  border-radius: 5px;
+  height: 200px;
+}
+.contact-page section {
+  margin: 40px 0;
+}
+.contact-page section h2 {
+  padding: 15px;
+}
+.contact-page section form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 20px;
+}
+.contact-page section form input {
+  margin: 5px 0;
+  height: 20px;
+  width: 30%;
+}
+@media (max-width: 500px) {
+  .contact-page section form input {
+    width: 90%;
+  }
+}
+.contact-page section form textarea {
+  margin: 5px 0;
+  width: 30%;
+}
+@media (max-width: 500px) {
+  .contact-page section form textarea {
+    width: 90%;
+  }
+}
+.contact-page section form submit {
+  width: 30%;
+  font-size: 16px;
+  background: #364254;
+  text-align: center;
+  color: white;
+  border-radius: 8px;
+  padding: 5px 12px;
+  margin-top: 10px;
+}
+.contact-page section form submit:hover {
+  background: white;
+  color: #364254;
+}
+@media (max-width: 500px) {
+  .contact-page section form submit {
+    width: 90%;
+    padding: 9px 16px;
+  }
 }
