@@ -375,6 +375,7 @@ footer {
 .contact-page header img {
   width: 100%;
   border-radius: 5px;
+  height: 200px;
 }
 .contact-page section {
   margin: 40px 0;
