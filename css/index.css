@@ -169,6 +169,8 @@ a {
   background: #f4f4f4;
   height: auto;
   padding-top: 10px;
+  z-index: 1;
+  opacity: 0.8;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -195,6 +197,11 @@ a {
 .nav-container nav a {
   font-size: 14px;
   font-weight: 600;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 footer {
   color: #22283B;
